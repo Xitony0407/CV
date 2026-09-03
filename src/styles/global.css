@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  background: #020306;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#inicio,
+#que-hago,
+#habilidades,
+#contacto {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 900px) {
+  #inicio,
+  #que-hago,
+  #habilidades,
+  #contacto {
+    scroll-margin-top: 85px;
+  }
+}
+
+@media (max-width: 650px) {
+  #inicio,
+  #que-hago,
+  #habilidades,
+  #contacto {
+    scroll-margin-top: 110px;
+  }
+}
+
+@media (max-width: 420px) {
+  #inicio,
+  #que-hago,
+  #habilidades,
+  #contacto {
+    scroll-margin-top: 115px;
+  }
+}

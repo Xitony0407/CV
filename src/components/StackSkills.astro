@@ -1,0 +1,267 @@
+---
+const stack = [
+  { name: "HTML5", image: "/stack/html5.png" },
+  { name: "CSS3", image: "/stack/css3.png" },
+  { name: "JavaScript", image: "/stack/javascript.png" },
+  { name: "TypeScript", image: "/stack/typescript.png" },
+  { name: "React", image: "/stack/react.png" },
+  { name: "Astro", image: "/stack/astro.png" },
+  { name: "Tailwind CSS", image: "/stack/tailwind.png" },
+  { name: "Bootstrap", image: "/stack/bootstrap.png" },
+  { name: "Node.js", image: "/stack/node.png" },
+  { name: "Express.js", image: "/stack/express.png" },
+  { name: "MySQL", image: "/stack/mysql.png" },
+  { name: "SQL", image: "/stack/sql.png" },
+  { name: "Git & GitHub", image: "/stack/github.png" },
+  { name: "REST APIs", image: "/stack/api.png" },
+  { name: "Mapbox GL JS", image: "/stack/mapbox.png" },
+  { name: "Leaflet.js", image: "/stack/leaflet.png" },
+];
+
+const skills = [
+  "Desarrollo de aplicaciones web full stack con tecnologías modernas.",
+  "Diseño y desarrollo de interfaces responsivas y centradas en el usuario.",
+  "Consumo e integración de APIs REST.",
+  "Diseño y manejo de bases de datos SQL.",
+  "Control de versiones con Git y GitHub.",
+  "Resolución de problemas y pensamiento lógico.",
+  "Organización, responsabilidad y trabajo en equipo.",
+  "Comunicación efectiva y aprendizaje constante.",
+];
+---
+
+<section
+  id="habilidades"
+  class="
+    grid w-full
+    grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)]
+    items-stretch
+    gap-[clamp(30px,4vw,65px)]
+    bg-[#020306]
+    px-[clamp(25px,5vw,90px)]
+    py-[clamp(55px,6vw,90px)]
+
+    max-[1200px]:gap-[35px]
+    max-[1200px]:px-[40px]
+    max-[1200px]:py-[60px]
+
+    max-[900px]:grid-cols-1
+    max-[900px]:gap-[45px]
+    max-[900px]:px-[clamp(25px,6vw,50px)]
+    max-[900px]:py-[55px]
+
+    max-[600px]:gap-[40px]
+    max-[600px]:px-[20px]
+    max-[600px]:pt-[45px]
+    max-[600px]:pb-[55px]
+
+    max-[400px]:px-[16px]
+  "
+>
+
+  <!-- =========================
+       MI STACK
+  ========================== -->
+
+  <div class="min-w-0 w-full">
+
+    <h2
+      class="
+        mb-[clamp(30px,3vw,45px)]
+        font-['Anton',sans-serif]
+        text-[clamp(38px,3.5vw,52px)]
+        leading-none
+        tracking-[1px]
+        text-[#8c42e8]
+
+        max-[600px]:mb-[30px]
+        max-[600px]:text-[clamp(36px,11vw,44px)]
+      "
+    >
+      MI STACK
+    </h2>
+
+
+    <div
+      class="
+        grid w-full
+        grid-cols-4
+        gap-x-[clamp(15px,2.5vw,35px)]
+        gap-y-[clamp(25px,3vw,40px)]
+
+        max-[1200px]:gap-x-[15px]
+
+        max-[900px]:grid-cols-4
+        max-[900px]:gap-x-[20px]
+        max-[900px]:gap-y-[30px]
+
+        max-[600px]:grid-cols-2
+        max-[600px]:gap-x-[20px]
+        max-[600px]:gap-y-[28px]
+
+        max-[400px]:gap-x-[12px]
+      "
+    >
+
+      {
+        stack.map((item) => (
+
+          <div
+            class="
+              flex min-w-0
+              flex-col items-center
+              justify-start
+              text-center
+            "
+          >
+
+            <img
+              src={item.image}
+              alt={item.name}
+              loading="lazy"
+              class="
+                mb-[10px]
+                h-[clamp(45px,4vw,62px)]
+                w-[clamp(45px,4vw,62px)]
+                object-contain
+
+                max-[900px]:h-[55px]
+                max-[900px]:w-[55px]
+
+                max-[600px]:h-[55px]
+                max-[600px]:w-[55px]
+              "
+            />
+
+            <span
+              class="
+                w-full
+                break-words
+                text-[clamp(11px,0.9vw,14px)]
+                leading-[1.35]
+                text-[#d9d9d9]
+
+                max-[900px]:text-[13px]
+
+                max-[600px]:text-[13px]
+              "
+            >
+              {item.name}
+            </span>
+
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       DIVISOR
+  ========================== -->
+
+  <div
+    class="
+      h-full w-px
+      bg-[linear-gradient(to_bottom,transparent,rgba(255,255,255,0.18)_10%,rgba(255,255,255,0.18)_90%,transparent)]
+
+      max-[900px]:h-px
+      max-[900px]:w-full
+      max-[900px]:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.18)_10%,rgba(255,255,255,0.18)_90%,transparent)]
+    "
+  ></div>
+
+
+  <!-- =========================
+       HABILIDADES
+  ========================== -->
+
+  <div class="min-w-0 w-full">
+
+    <h2
+      class="
+        mb-[clamp(30px,3vw,45px)]
+        font-['Anton',sans-serif]
+        text-[clamp(38px,3.5vw,52px)]
+        leading-none
+        tracking-[1px]
+        text-[#8c42e8]
+
+        max-[600px]:mb-[30px]
+        max-[600px]:text-[clamp(36px,11vw,44px)]
+      "
+    >
+      HABILIDADES
+    </h2>
+
+
+    <ul
+      class="
+        flex w-full
+        list-none
+        flex-col
+        gap-[clamp(16px,1.7vw,24px)]
+
+        max-[600px]:gap-[18px]
+      "
+    >
+
+      {
+        skills.map((skill) => (
+
+          <li
+            class="
+              flex w-full
+              items-start
+              gap-[clamp(10px,1vw,15px)]
+              text-[clamp(15px,1.3vw,20px)]
+              leading-[1.45]
+              text-[#d9d9d9]
+
+              max-[1200px]:text-[16px]
+
+              max-[900px]:text-[16px]
+
+              max-[600px]:text-[15px]
+              max-[600px]:leading-[1.5]
+
+              max-[400px]:text-[14px]
+            "
+          >
+
+            <span
+              class="
+                mt-[2px]
+                flex
+                h-[clamp(19px,1.5vw,23px)]
+                w-[clamp(19px,1.5vw,23px)]
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border-2
+                border-[#8738de]
+                text-[clamp(10px,0.8vw,13px)]
+                text-[#9a45e8]
+              "
+            >
+              ✓
+            </span>
+
+            <span class="min-w-0 flex-1">
+              {skill}
+            </span>
+
+          </li>
+
+        ))
+      }
+
+    </ul>
+
+  </div>
+
+</section>
