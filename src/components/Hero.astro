@@ -9,11 +9,7 @@ const t = useTranslations(lang);
   id="inicio"
   class="
     w-full overflow-hidden
-
     bg-[#020306]
-
-    [background-image:radial-gradient(circle_at_73%_40%,rgba(91,31,190,0.18),transparent_35%)]
-
     max-[900px]:pt-[70px]
     max-[600px]:pt-[75px]
     max-[420px]:pt-[80px]
@@ -22,20 +18,17 @@ const t = useTranslations(lang);
   <div
     class="
       relative flex w-full items-start
-
       min-h-[clamp(680px,82vh,860px)]
-
       max-[1200px]:min-h-[700px]
-
       max-[900px]:min-h-0
       max-[900px]:flex-col
     "
   >
+
     <!-- TEXTO IZQUIERDO -->
     <section
       class="
         z-[5] w-[58%]
-
         pl-[clamp(25px,4vw,70px)]
         pt-[clamp(110px,14vh,160px)]
 
@@ -54,20 +47,20 @@ const t = useTranslations(lang);
         max-[420px]:px-[16px]
       "
     >
+
       <h1
         class="
           flex flex-col
-
           font-['Anton',sans-serif]
           uppercase
           leading-[0.95]
         "
       >
+
         <span
           class="
             text-[clamp(58px,8vw,120px)]
             tracking-[2px]
-
             text-transparent
             bg-clip-text
             bg-gradient-to-r
@@ -87,7 +80,6 @@ const t = useTranslations(lang);
         <span
           class="
             whitespace-nowrap
-
             text-[clamp(42px,5.8vw,88px)]
             tracking-[1px]
             text-white
@@ -103,19 +95,17 @@ const t = useTranslations(lang);
         >
           {t("hero.lastName")}
         </span>
+
       </h1>
 
+      <!-- SOFTWARE DEVELOPER -->
       <div
         class="
           w-fit
-
           rotate-[-3deg]
-
           ml-[clamp(20px,5vw,90px)]
           mt-[clamp(10px,2vw,25px)]
-
           font-['Sacramento',cursive]
-
           text-[clamp(54px,6.5vw,100px)]
           text-[#9147e9]
 
@@ -124,7 +114,7 @@ const t = useTranslations(lang);
 
           max-[600px]:ml-[4%]
           max-[600px]:mt-[15px]
-          max-[600px]:text-[clamp(50px,15vw,72px)]
+          max-[600px]:text-[clamp(48px,14vw,70px)]
         "
       >
         {t("hero.role")}
@@ -133,48 +123,85 @@ const t = useTranslations(lang);
       <div
         class="
           h-[2px]
-
           w-[min(95%,900px)]
-
           mt-[-10px]
-          mb-[clamp(30px,4vw,50px)]
-
+          mb-[clamp(28px,3vw,40px)]
           bg-gradient-to-r
           from-[#8c2df2]
           via-[rgba(140,45,242,0.35)]
           to-transparent
 
           max-[600px]:w-full
-          max-[600px]:mb-[28px]
+          max-[600px]:mb-[25px]
         "
       ></div>
 
-      <p
+      <!-- CONTACTO EN HERO -->
+      <div
         class="
-          font-normal
-
-          text-[clamp(16px,1.9vw,29px)]
-          leading-[1.35]
-
+          flex flex-col
+          gap-[14px]
+          text-[clamp(15px,1.4vw,20px)]
           text-white
 
-          max-[900px]:text-[clamp(16px,3.3vw,24px)]
-
-          max-[600px]:text-[clamp(15px,4.4vw,20px)]
-          max-[600px]:leading-[1.4]
-
-          max-[420px]:[&>br]:hidden
+          max-[600px]:gap-[12px]
+          max-[600px]:text-[15px]
         "
       >
-        {t("hero.description1")}<br />
-        {t("hero.description2")}<br />
-        {t("hero.description3")}
 
-        <span class="text-[#9349e4]">
-          {" "}
-          {t("hero.university")}
-        </span>
-      </p>
+        <a
+          href="tel:+524778594499"
+          class="
+            flex w-fit items-center gap-[12px]
+            text-white
+            no-underline
+            transition-colors duration-200
+
+            hover:text-[#9747e8]
+          "
+        >
+          <span
+            class="
+              flex h-[32px] w-[32px]
+              items-center justify-center
+              rounded-full
+              border border-[#9747e8]
+              text-[15px]
+              text-[#9747e8]
+            "
+          >
+            ☎
+          </span>
+
+          <span>477 859 4499</span>
+        </a>
+
+        <div
+          class="
+            flex w-fit items-center gap-[12px]
+            text-white
+          "
+        >
+          <span
+            class="
+              flex h-[32px] w-[32px]
+              items-center justify-center
+              rounded-full
+              border border-[#9747e8]
+              font-[Arial,sans-serif]
+              text-[18px]
+              font-bold
+              text-[#9747e8]
+            "
+          >
+            in
+          </span>
+
+          <span>LinkedIn</span>
+        </div>
+
+      </div>
+
     </section>
 
     <!-- FOTO -->
@@ -183,10 +210,8 @@ const t = useTranslations(lang);
         absolute
         right-0
         bottom-0
-
         flex
         w-[52%]
-
         items-end
         justify-center
 
@@ -201,20 +226,17 @@ const t = useTranslations(lang);
         max-[900px]:pt-[10px]
       "
     >
+
       <img
         src="/CV/ximena.png"
         alt="Ximena Gutiérrez Pérez"
         class="
           relative
           z-[3]
-
           block
-
           w-full
           max-w-[720px]
-
           h-auto
-
           object-contain
           object-bottom
 
@@ -228,6 +250,8 @@ const t = useTranslations(lang);
           max-[420px]:w-[95%]
         "
       />
+
     </section>
+
   </div>
 </main>

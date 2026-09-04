@@ -14,11 +14,7 @@ export const ui = {
 
     "hero.firstName": "XIMENA",
     "hero.lastName": "GUTIERREZ PEREZ",
-    "hero.role": "Practicante",
-    "hero.description1": "ESTUDIANTE DE 7° SEMESTRE EN ",
-    "hero.description2": "INGENIERÍA DE SOFTWARE Y SISTEMAS ",
-    "hero.description3": "COMPUTACIONALES EN",
-    "hero.university": "LA SALLE BAJÍO",
+    "hero.role": "Software Developer",
 
     "what.title": "¿QUÉ HAGO?",
     "what.description1":
@@ -69,11 +65,7 @@ export const ui = {
 
     "hero.firstName": "XIMENA",
     "hero.lastName": "GUTIERREZ PEREZ",
-    "hero.role": "Intern",
-    "hero.description1": "7TH SEMESTER STUDENT IN",
-    "hero.description2": "SOFTWARE ENGINEERING AND",
-    "hero.description3": "COMPUTER SYSTEMS AT",
-    "hero.university": "LA SALLE BAJÍO",
+    "hero.role": "Software Developer",
 
     "what.title": "WHAT I DO",
     "what.description1":
