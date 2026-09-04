@@ -4,19 +4,28 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const spanishUrl = "/";
-const englishUrl = "/en/";
+// Base del proyecto.
+// Local: /
+// GitHub Pages: /CV/
+const base = import.meta.env.BASE_URL;
+
+const spanishUrl = base;
+const englishUrl = `${base}en/`;
 ---
 
 <nav
   class="
     fixed top-0 left-0 z-[1000]
     flex w-full items-center justify-between
+
     border-b border-[rgba(151,71,232,0.12)]
+
     bg-[rgba(2,3,6,0.9)]
+
     backdrop-blur-[12px]
 
     min-h-[70px]
+
     px-[clamp(20px,5vw,80px)]
 
     max-[900px]:min-h-[65px]
@@ -32,11 +41,9 @@ const englishUrl = "/en/";
     max-[420px]:py-[10px]
   "
 >
-
   <!-- =========================
        SELECTOR DE IDIOMA
   ========================== -->
-
   <div
     class="
       flex shrink-0 items-center gap-[7px]
@@ -73,14 +80,13 @@ const englishUrl = "/en/";
     </a>
   </div>
 
-
   <!-- =========================
        NAVEGACIÓN
   ========================== -->
-
   <div
     class="
       flex items-center
+
       gap-[clamp(18px,2.5vw,40px)]
 
       max-[900px]:gap-[20px]
@@ -95,13 +101,15 @@ const englishUrl = "/en/";
       max-[420px]:gap-y-[8px]
     "
   >
-
+    <!-- INICIO -->
     <a
       href="#inicio"
       class="
         relative whitespace-nowrap
+
         text-[clamp(11px,0.85vw,14px)]
         font-medium text-white no-underline
+
         transition-colors duration-200
 
         after:absolute
@@ -117,21 +125,25 @@ const englishUrl = "/en/";
         hover:after:w-full
 
         max-[900px]:text-[11px]
+
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
+
         max-[420px]:text-[9px]
       "
     >
       {t("nav.home")}
     </a>
 
-
+    <!-- QUÉ HAGO -->
     <a
       href="#que-hago"
       class="
         relative whitespace-nowrap
+
         text-[clamp(11px,0.85vw,14px)]
         font-medium text-white no-underline
+
         transition-colors duration-200
 
         after:absolute
@@ -147,21 +159,25 @@ const englishUrl = "/en/";
         hover:after:w-full
 
         max-[900px]:text-[11px]
+
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
+
         max-[420px]:text-[9px]
       "
     >
       {t("nav.whatIDo")}
     </a>
 
-
+    <!-- HABILIDADES -->
     <a
       href="#habilidades"
       class="
         relative whitespace-nowrap
+
         text-[clamp(11px,0.85vw,14px)]
         font-medium text-white no-underline
+
         transition-colors duration-200
 
         after:absolute
@@ -177,21 +193,25 @@ const englishUrl = "/en/";
         hover:after:w-full
 
         max-[900px]:text-[11px]
+
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
+
         max-[420px]:text-[9px]
       "
     >
       {t("nav.skills")}
     </a>
 
-
+    <!-- CONTACTO -->
     <a
       href="#contacto"
       class="
         relative whitespace-nowrap
+
         text-[clamp(11px,0.85vw,14px)]
         font-medium text-white no-underline
+
         transition-colors duration-200
 
         after:absolute
@@ -207,14 +227,14 @@ const englishUrl = "/en/";
         hover:after:w-full
 
         max-[900px]:text-[11px]
+
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
+
         max-[420px]:text-[9px]
       "
     >
       {t("nav.contact")}
     </a>
-
   </div>
-
 </nav>
