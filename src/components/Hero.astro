@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <main
@@ -16,18 +20,13 @@
     class="
       relative flex w-full items-start
       min-h-[clamp(680px,82vh,860px)]
-
       max-[1200px]:min-h-[700px]
-
       max-[900px]:min-h-0
       max-[900px]:flex-col
     "
   >
 
-    <!-- =========================
-         TEXTO IZQUIERDO
-    ========================== -->
-
+    <!-- TEXTO IZQUIERDO -->
     <section
       class="
         z-[5] w-[58%]
@@ -76,9 +75,8 @@
             max-[600px]:tracking-[1px]
           "
         >
-          XIMENA
+          {t("hero.firstName")}
         </span>
-
 
         <span
           class="
@@ -96,11 +94,10 @@
             max-[600px]:leading-none
           "
         >
-          GUTIERREZ PEREZ
+          {t("hero.lastName")}
         </span>
 
       </h1>
-
 
       <div
         class="
@@ -120,9 +117,8 @@
           max-[600px]:text-[clamp(50px,15vw,72px)]
         "
       >
-        Practicante
+        {t("hero.role")}
       </div>
-
 
       <div
         class="
@@ -140,7 +136,6 @@
         "
       ></div>
 
-
       <p
         class="
           font-normal
@@ -156,21 +151,18 @@
           max-[420px]:[&>br]:hidden
         "
       >
-        ESTUDIANTE DE 7° SEMESTRE EN<br />
-        INGENIERÍA DE SOFTWARE Y SISTEMAS<br />
-        COMPUTACIONALES EN
+        {t("hero.description1")}<br />
+        {t("hero.description2")}<br />
+        {t("hero.description3")}
         <span class="text-[#9349e4]">
-          LA SALLE BAJÍO
+          {" "}
+          {t("hero.university")}
         </span>
       </p>
 
     </section>
 
-
-    <!-- =========================
-         FOTO
-    ========================== -->
-
+    <!-- FOTO -->
     <section
       class="
         absolute right-0 top-0

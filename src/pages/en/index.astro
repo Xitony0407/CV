@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import Navbar from "../../components/Navbar.astro";
+import Hero from "../../components/Hero.astro";
+import WhatIDo from "../../components/WhatIDo.astro";
+import StackSkills from "../../components/StackSkills.astro";
+import Contact from "../../components/Contact.astro";
+---
+
+<Layout
+  lang="en"
+  title="Ximena Gutiérrez Pérez"
+  description="Portfolio of Ximena Gutiérrez Pérez, Software Engineering and Computer Systems student."
+>
+  <Navbar />
+
+  <main class="w-full">
+    <Hero />
+    <WhatIDo />
+    <StackSkills />
+  </main>
+
+  <Contact />
+</Layout>

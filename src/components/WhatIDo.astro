@@ -1,31 +1,32 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const services = [
   {
     number: "01",
-    title: "DESARROLLO WEB",
-    description:
-      "Creo aplicaciones web modernas, responsivas y de alto rendimiento.",
+    title: t("service.web.title"),
+    description: t("service.web.description"),
     image: "/desarrollo-web.png",
   },
   {
     number: "02",
-    title: "BACKEND Y BASES DE DATOS",
-    description:
-      "Desarrollo con Node.js, conexión a bases de datos SQL y diseño de estructuras eficientes.",
+    title: t("service.backend.title"),
+    description: t("service.backend.description"),
     image: "/backend.png",
   },
   {
     number: "03",
-    title: "DISEÑO UI/UX",
-    description:
-      "Interfaces intuitivas y atractivas que mejoran la experiencia del usuario.",
+    title: t("service.uiux.title"),
+    description: t("service.uiux.description"),
     image: "/uiux.png",
   },
   {
     number: "04",
-    title: "OPTIMIZACIÓN",
-    description:
-      "Mejor velocidad, rendimiento y SEO para obtener los mejores resultados.",
+    title: t("service.optimization.title"),
+    description: t("service.optimization.description"),
     image: "/optimizacion.png",
   },
 ];
@@ -56,10 +57,7 @@ const services = [
   "
 >
 
-  <!-- =========================
-       INTRO
-  ========================== -->
-
+  <!-- INTRO -->
   <div
     class="
       min-w-0 w-full
@@ -86,7 +84,7 @@ const services = [
         max-[600px]:text-[clamp(36px,11vw,44px)]
       "
     >
-      ¿QUÉ HAGO?
+      {t("what.title")}
     </h2>
 
     <p
@@ -106,8 +104,7 @@ const services = [
         max-[600px]:leading-[1.55]
       "
     >
-      Me apasiona diseñar, desarrollar y construir aplicaciones web modernas,
-      funcionales y centradas en la experiencia del usuario.
+      {t("what.description1")}
     </p>
 
     <p
@@ -127,16 +124,12 @@ const services = [
         max-[600px]:leading-[1.55]
       "
     >
-      Me enfoco en soluciones limpias, escalables y con buenas prácticas.
+      {t("what.description2")}
     </p>
 
   </div>
 
-
-  <!-- =========================
-       TARJETAS
-  ========================== -->
-
+  <!-- TARJETAS -->
   <div
     class="
       grid w-full
@@ -151,10 +144,8 @@ const services = [
       max-[600px]:gap-[18px]
     "
   >
-
     {
       services.map((service) => (
-
         <article
           class="
             relative
@@ -166,7 +157,6 @@ const services = [
             pt-[clamp(28px,2vw,34px)]
             pb-[42px]
             text-center
-
             min-h-[clamp(360px,25vw,415px)]
 
             transition-all
@@ -211,7 +201,6 @@ const services = [
               w-full
               items-center
               justify-center
-
               text-[clamp(13px,1vw,15px)]
               font-medium
               leading-[1.45]
@@ -229,7 +218,6 @@ const services = [
               mx-auto
               w-full
               max-w-[180px]
-
               text-[clamp(13px,0.9vw,14px)]
               leading-[1.6]
               text-white
@@ -248,7 +236,6 @@ const services = [
               absolute
               bottom-[13px]
               left-[16px]
-
               text-[14px]
               text-[#9747e8]
             "
@@ -257,10 +244,8 @@ const services = [
           </span>
 
         </article>
-
       ))
     }
-
   </div>
 
 </section>

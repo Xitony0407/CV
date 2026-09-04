@@ -1,4 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const spanishUrl = "/";
+const englishUrl = "/en/";
 ---
 
 <nav
@@ -16,7 +23,8 @@
     max-[900px]:px-[25px]
 
     max-[650px]:min-h-0
-    max-[650px]:justify-center
+    max-[650px]:flex-col
+    max-[650px]:gap-[10px]
     max-[650px]:px-[15px]
     max-[650px]:py-[12px]
 
@@ -25,12 +33,50 @@
   "
 >
 
+  <!-- =========================
+       SELECTOR DE IDIOMA
+  ========================== -->
+
   <div
     class="
-      h-px w-px
-      max-[650px]:hidden
+      flex shrink-0 items-center gap-[7px]
+      text-[11px] font-medium
+      tracking-[1px]
+
+      max-[650px]:text-[10px]
     "
-  ></div>
+  >
+    <a
+      href={spanishUrl}
+      class:list={[
+        "no-underline transition-colors duration-200",
+        lang === "es"
+          ? "text-[#9747e8]"
+          : "text-[#a9a9a9] hover:text-white",
+      ]}
+    >
+      ES
+    </a>
+
+    <span class="text-[#555]">|</span>
+
+    <a
+      href={englishUrl}
+      class:list={[
+        "no-underline transition-colors duration-200",
+        lang === "en"
+          ? "text-[#9747e8]"
+          : "text-[#a9a9a9] hover:text-white",
+      ]}
+    >
+      EN
+    </a>
+  </div>
+
+
+  <!-- =========================
+       NAVEGACIÓN
+  ========================== -->
 
   <div
     class="
@@ -55,9 +101,7 @@
       class="
         relative whitespace-nowrap
         text-[clamp(11px,0.85vw,14px)]
-        font-medium
-        text-white
-        no-underline
+        font-medium text-white no-underline
         transition-colors duration-200
 
         after:absolute
@@ -73,24 +117,21 @@
         hover:after:w-full
 
         max-[900px]:text-[11px]
-
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
-
         max-[420px]:text-[9px]
       "
     >
-      INICIO
+      {t("nav.home")}
     </a>
+
 
     <a
       href="#que-hago"
       class="
         relative whitespace-nowrap
         text-[clamp(11px,0.85vw,14px)]
-        font-medium
-        text-white
-        no-underline
+        font-medium text-white no-underline
         transition-colors duration-200
 
         after:absolute
@@ -106,24 +147,21 @@
         hover:after:w-full
 
         max-[900px]:text-[11px]
-
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
-
         max-[420px]:text-[9px]
       "
     >
-      ¿QUÉ HAGO?
+      {t("nav.whatIDo")}
     </a>
+
 
     <a
       href="#habilidades"
       class="
         relative whitespace-nowrap
         text-[clamp(11px,0.85vw,14px)]
-        font-medium
-        text-white
-        no-underline
+        font-medium text-white no-underline
         transition-colors duration-200
 
         after:absolute
@@ -139,24 +177,21 @@
         hover:after:w-full
 
         max-[900px]:text-[11px]
-
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
-
         max-[420px]:text-[9px]
       "
     >
-      HABILIDADES
+      {t("nav.skills")}
     </a>
+
 
     <a
       href="#contacto"
       class="
         relative whitespace-nowrap
         text-[clamp(11px,0.85vw,14px)]
-        font-medium
-        text-white
-        no-underline
+        font-medium text-white no-underline
         transition-colors duration-200
 
         after:absolute
@@ -172,14 +207,12 @@
         hover:after:w-full
 
         max-[900px]:text-[11px]
-
         max-[650px]:text-[10px]
         max-[650px]:after:bottom-[-4px]
-
         max-[420px]:text-[9px]
       "
     >
-      CONTACTO
+      {t("nav.contact")}
     </a>
 
   </div>

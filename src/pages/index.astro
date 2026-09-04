@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
 
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
@@ -8,60 +8,18 @@ import StackSkills from "../components/StackSkills.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<!doctype html>
+<Layout
+  lang="es"
+  title="Ximena Gutiérrez Pérez"
+  description="Portafolio de Ximena Gutiérrez Pérez, estudiante de Ingeniería de Software y Sistemas Computacionales."
+>
+  <Navbar />
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+  <main class="w-full">
+    <Hero />
+    <WhatIDo />
+    <StackSkills />
+  </main>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <meta
-      name="description"
-      content="Portafolio de Ximena Gutiérrez Pérez, estudiante de Ingeniería de Software y Sistemas Computacionales."
-    />
-
-    <title>Ximena Gutiérrez Pérez</title>
-
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600&family=Sacramento&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body
-    class="
-      min-h-screen
-      w-full
-      overflow-x-hidden
-      bg-[#020306]
-      font-['Montserrat',sans-serif]
-      text-white
-      antialiased
-    "
-  >
-    <Navbar />
-
-    <main class="w-full">
-      <Hero />
-      <WhatIDo />
-      <StackSkills />
-    </main>
-
-    <Contact />
-  </body>
-</html>
+  <Contact />
+</Layout>

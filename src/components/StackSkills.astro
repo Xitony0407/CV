@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const stack = [
   { name: "HTML5", image: "/stack/html5.png" },
   { name: "CSS3", image: "/stack/css3.png" },
@@ -19,14 +24,14 @@ const stack = [
 ];
 
 const skills = [
-  "Desarrollo de aplicaciones web full stack con tecnologías modernas.",
-  "Diseño y desarrollo de interfaces responsivas y centradas en el usuario.",
-  "Consumo e integración de APIs REST.",
-  "Diseño y manejo de bases de datos SQL.",
-  "Control de versiones con Git y GitHub.",
-  "Resolución de problemas y pensamiento lógico.",
-  "Organización, responsabilidad y trabajo en equipo.",
-  "Comunicación efectiva y aprendizaje constante.",
+  t("skill.1"),
+  t("skill.2"),
+  t("skill.3"),
+  t("skill.4"),
+  t("skill.5"),
+  t("skill.6"),
+  t("skill.7"),
+  t("skill.8"),
 ];
 ---
 
@@ -59,10 +64,7 @@ const skills = [
   "
 >
 
-  <!-- =========================
-       MI STACK
-  ========================== -->
-
+  <!-- MI STACK -->
   <div class="min-w-0 w-full">
 
     <h2
@@ -78,9 +80,8 @@ const skills = [
         max-[600px]:text-[clamp(36px,11vw,44px)]
       "
     >
-      MI STACK
+      {t("stack.title")}
     </h2>
-
 
     <div
       class="
@@ -102,10 +103,8 @@ const skills = [
         max-[400px]:gap-x-[12px]
       "
     >
-
       {
         stack.map((item) => (
-
           <div
             class="
               flex min-w-0
@@ -114,7 +113,6 @@ const skills = [
               text-center
             "
           >
-
             <img
               src={item.image}
               alt={item.name}
@@ -142,27 +140,19 @@ const skills = [
                 text-[#d9d9d9]
 
                 max-[900px]:text-[13px]
-
                 max-[600px]:text-[13px]
               "
             >
               {item.name}
             </span>
-
           </div>
-
         ))
       }
-
     </div>
 
   </div>
 
-
-  <!-- =========================
-       DIVISOR
-  ========================== -->
-
+  <!-- DIVISOR -->
   <div
     class="
       h-full w-px
@@ -174,11 +164,7 @@ const skills = [
     "
   ></div>
 
-
-  <!-- =========================
-       HABILIDADES
-  ========================== -->
-
+  <!-- HABILIDADES -->
   <div class="min-w-0 w-full">
 
     <h2
@@ -194,9 +180,8 @@ const skills = [
         max-[600px]:text-[clamp(36px,11vw,44px)]
       "
     >
-      HABILIDADES
+      {t("skills.title")}
     </h2>
-
 
     <ul
       class="
@@ -208,10 +193,8 @@ const skills = [
         max-[600px]:gap-[18px]
       "
     >
-
       {
         skills.map((skill) => (
-
           <li
             class="
               flex w-full
@@ -222,7 +205,6 @@ const skills = [
               text-[#d9d9d9]
 
               max-[1200px]:text-[16px]
-
               max-[900px]:text-[16px]
 
               max-[600px]:text-[15px]
@@ -231,7 +213,6 @@ const skills = [
               max-[400px]:text-[14px]
             "
           >
-
             <span
               class="
                 mt-[2px]
@@ -254,12 +235,9 @@ const skills = [
             <span class="min-w-0 flex-1">
               {skill}
             </span>
-
           </li>
-
         ))
       }
-
     </ul>
 
   </div>
