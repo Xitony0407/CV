@@ -1,9 +1,11 @@
 import { ui, defaultLang } from "./ui";
 
 export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split("/");
+  const segments = url.pathname.split("/").filter(Boolean);
 
-  if (lang in ui) {
+  const lang = segments.find((segment) => segment in ui);
+
+  if (lang && lang in ui) {
     return lang as keyof typeof ui;
   }
 
