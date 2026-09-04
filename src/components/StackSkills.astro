@@ -5,22 +5,22 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const stack = [
-  { name: "HTML5", image: "/stack/html5.png" },
-  { name: "CSS3", image: "/stack/css3.png" },
-  { name: "JavaScript", image: "/stack/javascript.png" },
-  { name: "TypeScript", image: "/stack/typescript.png" },
-  { name: "React", image: "/stack/react.png" },
-  { name: "Astro", image: "/stack/astro.png" },
-  { name: "Tailwind CSS", image: "/stack/tailwind.png" },
-  { name: "Bootstrap", image: "/stack/bootstrap.png" },
-  { name: "Node.js", image: "/stack/node.png" },
-  { name: "Express.js", image: "/stack/express.png" },
-  { name: "MySQL", image: "/stack/mysql.png" },
-  { name: "SQL", image: "/stack/sql.png" },
-  { name: "Git & GitHub", image: "/stack/github.png" },
-  { name: "REST APIs", image: "/stack/api.png" },
-  { name: "Mapbox GL JS", image: "/stack/mapbox.png" },
-  { name: "Leaflet.js", image: "/stack/leaflet.png" },
+  { name: "HTML5", image: `${import.meta.env.BASE_URL}stack/html5.png` },
+  { name: "CSS3", image: `${import.meta.env.BASE_URL}stack/css3.png` },
+  { name: "JavaScript", image: `${import.meta.env.BASE_URL}stack/javascript.png` },
+  { name: "TypeScript", image: `${import.meta.env.BASE_URL}stack/typescript.png` },
+  { name: "React", image: `${import.meta.env.BASE_URL}stack/react.png` },
+  { name: "Astro", image: `${import.meta.env.BASE_URL}stack/astro.png` },
+  { name: "Tailwind CSS", image: `${import.meta.env.BASE_URL}stack/tailwind.png` },
+  { name: "Bootstrap", image: `${import.meta.env.BASE_URL}stack/bootstrap.png` },
+  { name: "Node.js", image: `${import.meta.env.BASE_URL}stack/node.png` },
+  { name: "Express.js", image: `${import.meta.env.BASE_URL}stack/express.png` },
+  { name: "MySQL", image: `${import.meta.env.BASE_URL}stack/mysql.png` },
+  { name: "SQL", image: `${import.meta.env.BASE_URL}stack/sql.png` },
+  { name: "Git & GitHub", image: `${import.meta.env.BASE_URL}stack/github.png` },
+  { name: "REST APIs", image: `${import.meta.env.BASE_URL}stack/api.png` },
+  { name: "Mapbox GL JS", image: `${import.meta.env.BASE_URL}stack/mapbox.png` },
+  { name: "Leaflet.js", image: `${import.meta.env.BASE_URL}stack/leaflet.png` },
 ];
 
 const skills = [
