@@ -54,7 +54,6 @@ export const ui = {
 
     "contact.title": "CONTACTO",
     "contact.connect": "CONECTEMOS",
-    "contact.location": "León, Guanajuato, México",
   },
 
   en: {
@@ -105,6 +104,5 @@ export const ui = {
 
     "contact.title": "CONTACT",
     "contact.connect": "LET'S CONNECT",
-    "contact.location": "León, Guanajuato, Mexico",
   },
 } as const;
