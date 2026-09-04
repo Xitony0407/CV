@@ -1,11 +1,22 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+// @ts-check
+
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: 'https://Xitony0407.github.io',
-  base: '/CV',
+  site: "https://xitony0407.github.io",
+  base: "/CV",
+
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });

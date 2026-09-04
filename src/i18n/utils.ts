@@ -5,7 +5,7 @@ export function getLangFromUrl(url: URL) {
 
   const lang = segments.find((segment) => segment in ui);
 
-  if (lang && lang in ui) {
+  if (lang) {
     return lang as keyof typeof ui;
   }
 
