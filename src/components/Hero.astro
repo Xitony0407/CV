@@ -9,8 +9,11 @@ const t = useTranslations(lang);
   id="inicio"
   class="
     w-full overflow-hidden
+
     bg-[#020306]
+
     [background-image:radial-gradient(circle_at_73%_40%,rgba(91,31,190,0.18),transparent_35%)]
+
     max-[900px]:pt-[70px]
     max-[600px]:pt-[75px]
     max-[420px]:pt-[80px]
@@ -19,17 +22,20 @@ const t = useTranslations(lang);
   <div
     class="
       relative flex w-full items-start
+
       min-h-[clamp(680px,82vh,860px)]
+
       max-[1200px]:min-h-[700px]
+
       max-[900px]:min-h-0
       max-[900px]:flex-col
     "
   >
-
     <!-- TEXTO IZQUIERDO -->
     <section
       class="
         z-[5] w-[58%]
+
         pl-[clamp(25px,4vw,70px)]
         pt-[clamp(110px,14vh,160px)]
 
@@ -48,20 +54,20 @@ const t = useTranslations(lang);
         max-[420px]:px-[16px]
       "
     >
-
       <h1
         class="
           flex flex-col
+
           font-['Anton',sans-serif]
           uppercase
           leading-[0.95]
         "
       >
-
         <span
           class="
             text-[clamp(58px,8vw,120px)]
             tracking-[2px]
+
             text-transparent
             bg-clip-text
             bg-gradient-to-r
@@ -81,6 +87,7 @@ const t = useTranslations(lang);
         <span
           class="
             whitespace-nowrap
+
             text-[clamp(42px,5.8vw,88px)]
             tracking-[1px]
             text-white
@@ -96,16 +103,19 @@ const t = useTranslations(lang);
         >
           {t("hero.lastName")}
         </span>
-
       </h1>
 
       <div
         class="
           w-fit
+
           rotate-[-3deg]
+
           ml-[clamp(20px,5vw,90px)]
           mt-[clamp(10px,2vw,25px)]
+
           font-['Sacramento',cursive]
+
           text-[clamp(54px,6.5vw,100px)]
           text-[#9147e9]
 
@@ -123,9 +133,12 @@ const t = useTranslations(lang);
       <div
         class="
           h-[2px]
+
           w-[min(95%,900px)]
+
           mt-[-10px]
           mb-[clamp(30px,4vw,50px)]
+
           bg-gradient-to-r
           from-[#8c2df2]
           via-[rgba(140,45,242,0.35)]
@@ -139,8 +152,10 @@ const t = useTranslations(lang);
       <p
         class="
           font-normal
+
           text-[clamp(16px,1.9vw,29px)]
           leading-[1.35]
+
           text-white
 
           max-[900px]:text-[clamp(16px,3.3vw,24px)]
@@ -154,57 +169,65 @@ const t = useTranslations(lang);
         {t("hero.description1")}<br />
         {t("hero.description2")}<br />
         {t("hero.description3")}
+
         <span class="text-[#9349e4]">
           {" "}
           {t("hero.university")}
         </span>
       </p>
-
     </section>
 
     <!-- FOTO -->
     <section
       class="
-        absolute right-0 top-0
-        flex h-full w-[52%]
-        items-end justify-center
-        overflow-visible
+        absolute
+        right-0
+        bottom-0
+
+        flex
+        w-[52%]
+
+        items-end
+        justify-center
 
         max-[1200px]:w-[48%]
 
         max-[900px]:relative
         max-[900px]:right-auto
-        max-[900px]:top-auto
-        max-[900px]:min-h-[450px]
-        max-[900px]:h-auto
+        max-[900px]:bottom-auto
         max-[900px]:w-full
-
-        max-[600px]:min-h-[380px]
-        max-[600px]:pt-[10px]
-
-        max-[420px]:min-h-[330px]
+        max-[900px]:items-center
+        max-[900px]:justify-center
+        max-[900px]:pt-[10px]
       "
     >
+      <img
+        src="/CV/ximena.png"
+        alt="Ximena Gutiérrez Pérez"
+        class="
+          relative
+          z-[3]
 
-<img
-  src="/CV/desarrollo-web.png"
-  alt="Ximena Gutiérrez Pérez"
-  class="
-    z-[3]
-    h-[min(95%,820px)]
-    w-auto
-    max-w-full
-    object-contain
-    object-bottom
+          block
 
-    max-[900px]:h-auto
-    max-[900px]:w-[min(88%,520px)]
-    max-[900px]:max-h-none
+          w-full
+          max-w-[720px]
 
-    max-[600px]:w-[min(95%,430px)]
-  "
-/>
+          h-auto
+
+          object-contain
+          object-bottom
+
+          max-[1200px]:max-w-[620px]
+
+          max-[900px]:w-[min(88%,520px)]
+          max-[900px]:max-w-none
+
+          max-[600px]:w-[min(95%,430px)]
+
+          max-[420px]:w-[95%]
+        "
+      />
     </section>
-
   </div>
 </main>
